@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gizem Kuyumculuk | Bornova, İzmir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0d0a;--surf:#1a1712;--surf2:#231f18;--tx:#f3ead7;--mut:#b3a78d;--gold:#d4af37;--gold2:#f1d77a;--line:#3a3325;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fbf7ee;--surf:#fff;--surf2:#f4ecd8;--tx:#2a2418;--mut:#6f6550;--gold:#a8841a;--gold2:#c9a227;--line:#e5d9b8;color-scheme:light}}
+:root[data-theme="dark"]{color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Jost',system-ui,sans-serif;font-weight:300;line-height:1.7}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;margin:0;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.04em}
+nav{display:flex;gap:22px;font-size:.9rem}
+nav a{color:var(--mut)}nav a:hover{color:var(--gold)}
+@media(max-width:640px){nav{display:none}}
+.hero{padding:90px 0 80px;text-align:center;background:radial-gradient(ellipse at 50% 0%,color-mix(in srgb,var(--gold) 22%,transparent),transparent 65%)}
+.eyebrow{color:var(--gold);letter-spacing:.3em;font-size:.75rem;text-transform:uppercase}
+.hero h1{font-size:clamp(2.6rem,8vw,5rem);margin:14px 0 18px}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{max-width:520px;margin:0 auto 30px;color:var(--mut);font-size:1.05rem}
+.gem{width:84px;margin:0 auto 6px;display:block}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:13px 28px;border-radius:40px;font-weight:500;font-size:.95rem;border:1px solid var(--gold);transition:.2s}
+.btn.fill{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1405}
+.btn.fill:hover{transform:translateY(-2px)}
+.btn.line:hover{background:var(--gold);color:#1a1405}
+.rate{margin-top:34px;display:inline-flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mut);border:1px solid var(--line);padding:8px 18px;border-radius:30px;background:var(--surf)}
+.rate b{color:var(--gold);font-weight:500}
+section{padding:70px 0}
+.head{text-align:center;margin-bottom:40px}
+.head h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:28px 18px;text-align:center;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.card svg{width:76px;height:76px;margin-bottom:12px}
+.card h3{font-size:1.4rem;color:var(--gold)}
+.card p{margin:6px 0 0;color:var(--mut);font-size:.9rem}
+.alt{background:var(--surf2)}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+.feat div{text-align:center}
+.feat .ic{font-size:1.8rem;color:var(--gold)}
+.feat h3{font-size:1.3rem;margin:6px 0}
+.feat p{margin:0;color:var(--mut);font-size:.92rem}
+.rev{max-width:640px;margin:auto;background:var(--surf);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center}
+.stars{color:var(--gold);letter-spacing:4px;font-size:1.2rem}
+.rev p{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;margin:14px 0}
+.rev small{color:var(--mut)}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.box{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:26px}
+.box h3{color:var(--gold);font-size:1.5rem;margin-bottom:12px}
+.box p{margin:6px 0;color:var(--mut)}
+.box p b{color:var(--tx);font-weight:500}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--mut);font-size:.85rem}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.4);z-index:30}
+.wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">GİZEM KUYUMCULUK</a>
+<nav><a href="#koleksiyon">Koleksiyon</a><a href="#neden">Neden Biz</a><a href="#yorum">Yorumlar</a><a href="#iletisim">İletişim</a></nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<svg class="gem" viewBox="0 0 100 90" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linejoin="round"><path d="M25 5h50l22 28-47 52L3 33z"/><path d="M3 33h94M35 33l15 52 15-52M25 5l10 28 15-28 15 28 10-28M50 5v0"/></svg>
+<div class="eyebrow">Bornova · İzmir</div>
+<h1>Işıltının <em>güvenilir</em> adresi</h1>
+<p>Altın, pırlanta ve özel tasarım takılarda geniş ürün yelpazesi, samimi hizmet ve yıllara dayanan güven.</p>
+<div class="btns"><a class="btn fill" href="#koleksiyon">Koleksiyonu Keşfet</a><a class="btn line" href="tel:+905305139018">Hemen Ara</a></div>
+<div class="rate"><span class="stars">★★★★★</span><span><b>4,6</b> · 23 Google yorumu</span></div>
+</div></div>
+
+<section id="koleksiyon"><div class="wrap">
+<div class="head"><div class="eyebrow">Koleksiyon</div><h2>Size özel seçkiler</h2></div>
+<div class="grid">
+<div class="card"><svg viewBox="0 0 80 80" fill="none" stroke="var(--gold)" stroke-width="3"><circle cx="40" cy="48" r="20"/><circle cx="40" cy="48" r="14" opacity=".5"/><path d="M32 22l8-10 8 10-8 8z" fill="var(--gold2)"/></svg><h3>Yüzükler</h3><p>Alyans, tek taş, söz ve nişan yüzükleri</p></div>
+<div class="card"><svg viewBox="0 0 80 80" fill="none" stroke="var(--gold)" stroke-width="3"><path d="M12 14c0 36 12 46 28 46s28-10 28-46"/><path d="M40 60l-6 8 6 8 6-8z" fill="var(--gold2)"/></svg><h3>Kolyeler</h3><p>İnci, pırlanta ve altın zincir modelleri</p></div>
+<div class="card"><svg viewBox="0 0 80 80" fill="none" stroke="var(--gold)" stroke-width="3"><ellipse cx="40" cy="44" rx="30" ry="18"/><ellipse cx="40" cy="44" rx="24" ry="13" opacity=".5"/><circle cx="40" cy="26" r="4" fill="var(--gold2)"/></svg><h3>Bilezikler</h3><p>Burma, ajda ve zarif zincir bilezikler</p></div>
+<div class="card"><svg viewBox="0 0 80 80" fill="none" stroke="var(--gold)" stroke-width="3"><circle cx="26" cy="20" r="5"/><path d="M26 25v14"/><path d="M26 39l-8 14 8 12 8-12z" fill="var(--gold2)"/><circle cx="56" cy="20" r="5"/><path d="M56 25v14"/><path d="M56 39l-8 14 8 12 8-12z" fill="var(--gold2)"/></svg><h3>Küpeler</h3><p>Günlük ve özel gün küpe çeşitleri</p></div>
+<div class="card"><svg viewBox="0 0 80 80" fill="none" stroke="var(--gold)" stroke-width="3"><path d="M20 56l8-26h24l8 26z" fill="var(--gold2)" fill-opacity=".25"/><path d="M28 30l4-10h16l4 10M20 56h40v8H20z"/></svg><h3>Altın & Külçe</h3><p>Çeyrek, yarım, tam, gram ve yatırım altını</p></div>
+</div></div></section>
+
+<section id="neden" class="alt"><div class="wrap">
+<div class="head"><div class="eyebrow">Neden Biz</div><h2>Güven, samimiyet, çeşitlilik</h2></div>
+<div class="feat">
+<div><div class="ic">◆</div><h3>Geniş Ürün Yelpazesi</h3><p>Aradığınız modeli bulabileceğiniz zengin koleksiyon.</p></div>
+<div><div class="ic">◆</div><h3>Güler Yüzlü Ekip</h3><p>İsteğinizi anlayan, samimi ve ilgili hizmet.</p></div>
+<div><div class="ic">◆</div><h3>Yılların Güveni</h3><p>Yıllardır aynı konumda hizmet veriyoruz.</p></div>
+<div><div class="ic">◆</div><h3>Mağazadan Teslim</h3><p>Siparişinizi mağazamızdan kolayca teslim alın.</p></div>
+</div></div></section>
+
+<section id="yorum"><div class="wrap">
+<div class="head"><div class="eyebrow">Müşteri Yorumları</div><h2>Bizi onlardan dinleyin</h2></div>
+<div class="rev"><div class="stars">★★★★★</div>
+<p>“Samimi, güler yüzlü çalışanlar. İsteğinizi karşılayabilecek ürün yelpazesi var. Güvenilir bir çalışma ortamı var, senelerdir aynı konumda hizmet ediyorlar.”</p>
+<small>Nail Akgün · Google Yerel Rehber</small></div>
+</div></section>
+
+<section id="iletisim" class="alt"><div class="wrap">
+<div class="head"><div class="eyebrow">İletişim</div><h2>Mağazamıza bekleriz</h2></div>
+<div class="contact">
+<div class="box"><h3>Adres</h3><p>Ergene, Mustafa Kemal Cd. No:22 D:E<br>35040 Bornova / İzmir</p>
+<p><b>Konum kodu:</b> F688+4P</p>
+<p style="margin-top:16px"><a class="btn line" style="display:inline-block" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Gizem+Kuyumculuk+Bornova+%C4%B0zmir">Yol Tarifi Al</a></p></div>
+<div class="box"><h3>Çalışma Saatleri</h3><p><b>Her gün:</b> 09:00 – 19:00</p><p style="font-size:.85rem">Saatler değişebilir, aramadan önce teyit edebilirsiniz.</p>
+<h3 style="margin-top:18px">Telefon</h3><p><a href="tel:+905305139018"><b>0530 513 90 18</b></a></p></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Gizem Kuyumculuk · Bornova, İzmir</div></footer>
+
+<a class="wa" aria-label="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/905305139018?text=Merhaba%2C%20bilgi%20almak%20istiyorum."><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.600c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2 1.100 1 2.100 1.300 2.400 1.400.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.700-.1 1.300z"/></svg></a>
+</body>
+</html>
